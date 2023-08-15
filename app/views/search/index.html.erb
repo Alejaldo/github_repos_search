@@ -1,0 +1,9 @@
+<div data-controller="search">
+  <div class="search-container">
+    <form action="/search" method="get" data-action="submit->search#search">
+      <input type="text" name="q" placeholder="Search GitHub repositories" data-search-target="input">
+      <input type="submit" value="Search">
+    </form>
+  </div>
+  <div data-search-target="results"></div>
+</div>
