@@ -21,8 +21,8 @@ This project is a web application that allows users to search for GitHub reposit
 
 ## How to Set Up and Run the Project
 
-1. **Clone the Repository**: `git clone https://github.com/your_username/your_repository_name.git`
-2. **Navigate to the Directory**: `cd your_project_directory`
+1. **Clone the Repository**: `git clone https://github.com/alejaldo/github_repos_search.git`
+2. **Navigate to the Directory**: `cd github_repos_search`
 3. **Install Dependencies**: `bundle install`
 4. **Set Up the Database**: `rails db:create db:migrate`
 5. **Start the Server**: `rails server`
