@@ -34,5 +34,24 @@ RSpec.describe SearchController, type: :controller do
       expect(response.content_type).to eq('application/json; charset=utf-8')
       expect(response.body).to eq(repositories.to_json)
     end
+
+    context 'with invalid query parameter' do
+      it 'redirects to root path for too long query' do
+        get :index, params: { q: 'a' * 256 }
+        expect(response).to redirect_to(root_path)
+      end
+
+      it 'redirects to root path for query with invalid characters' do
+        get :index, params: { q: 'invalid/query!' }
+        expect(response).to redirect_to(root_path)
+      end
+    end
+
+    context 'without query parameter' do
+      it 'does not redirect and successfully renders the page' do
+        get :index
+        expect(response).to have_http_status(:success)
+      end
+    end
   end
 end
