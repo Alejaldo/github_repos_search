@@ -18,6 +18,7 @@ This project is a web application that allows users to search for GitHub reposit
 - **Ruby on Rails**
 - **Database**: The application currently does not utilize a database as it fetches information directly from the GitHub API. There is no need to persist data, which simplifies the architecture and reduces the overhead.
 - **Testing**: RSpec, Capybara, and WebMock are used for robust testing of features and integrations.
+- **UI**: "hotwired/stimulus" approach.
 
 ## How to Set Up and Run the Project
 
@@ -32,4 +33,4 @@ This project is a web application that allows users to search for GitHub reposit
 
 - **Background Processing**: Integrate Sidekiq and Redis to offload certain tasks to background workers.
 - **Enhanced UI**: Improve user interface and user experience.
-- **Additional Features**: Incorporate more filtering options for search results.
+- **Additional Features**: Incorporate more filtering options for search results, integrate internationalization (i18n) if needed, etc.
